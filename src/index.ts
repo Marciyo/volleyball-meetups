@@ -17,19 +17,19 @@ type Meetup = {
 const meetups: Meetup[] = [
     {
         id: '1',
-        title: 'React Meetup',
-        description: 'Discussing the latest in React development.',
-        price: 20,
-        location: 'New York',
+        title: 'Beach Volleyball Meetup',
+        description: 'Casual beach volleyball games for all skill levels.',
+        price: 1000,
+        location: 'Odaiba Beach, Tokyo',
         participants: ['Alice', 'Bob'],
     },
     {
         id: '2',
-        title: 'Node.js Workshop',
-        description: 'Hands-on workshop on Node.js.',
-        price: 30,
-        location: 'San Francisco',
-        participants: ['Charlie'],
+        title: 'Indoor Volleyball Tournament',
+        description: 'Competitive indoor volleyball tournament.',
+        price: 2500,
+        location: 'Tokyo Metropolitan Gymnasium',
+        participants: ['Charlie', 'Dave'],
     },
 ];
 
@@ -47,6 +47,9 @@ app.post('/meetups', (req, res) => {
   res.status(201).json(newMeetup);
 });
 
-app.listen(3000, () => {
-  console.log('API running on http://localhost:3000');
+const PORT = process.env.PORT;
+const HOST = process.env.RENDER_EXTERNAL_URL;
+
+app.listen(PORT, () => {
+  console.log(`API running on ${HOST}:${PORT}`);
 });
