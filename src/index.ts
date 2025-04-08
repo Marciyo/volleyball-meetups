@@ -31,6 +31,22 @@ const meetups: Meetup[] = [
         location: 'Tokyo Metropolitan Gymnasium',
         participants: ['Charlie', 'Dave'],
     },
+    {
+        id: '3',
+        title: 'Beach Volleyball Training Camp',
+        description: 'Intensive training camp for beach volleyball enthusiasts.',
+        price: 5000,
+        location: 'Shonan Beach, Kanagawa',
+        participants: ['Eve', 'Frank'],
+    },
+    {
+        id: '4',
+        title: 'Beach Volleyball Social Event',
+        description: 'Social event for beach volleyball players to meet and mingle.',
+        price: 1500,
+        location: 'Enoshima Beach, Kanagawa',
+        participants: ['Grace', 'Heidi'],
+    },
 ];
 
 app.get('/meetups', (req, res) => {
